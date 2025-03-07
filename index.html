@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/styles/root.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+
+    <title>Document</title>
+    <style>
+      .event-card img {
+        width: 100%;
+        height: 25vh;
+        object-fit: cover;
+      }
+
+      .news-card img {
+        width: 100%;
+        height: 25vh;
+        object-fit: cover;
+      }
+
+      @media (min-width: 576px) {
+        .event-card img {
+          width: 100%;
+          height: 36vh;
+        }
+        .news-card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          align-self: 1 /1;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .event-card img {
+          width: 40vh;
+          height: 36vh;
+          aspect-ratio: 1 / 1;
+        }
+        .news-card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          aspect-ratio: 1/1;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .event-card img {
+          width: 100%;
+          height: 27vh;
+        }
+        .news-card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          aspect-ratio: 1 /1;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .event-card img {
+          width: 70vh;
+          height: 30vh;
+        }
+        .news-card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          aspect-ratio: 1 /1;
+        }
+      }
+
+      @media (min-width: 1400px) {
+        .event-card img {
+          width: 45vh;
+          height: 45vh;
+          max-width: 45vh;
+          aspect-ratio: 10 / 3;
+        }
+        .news-card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          aspect-ratio: 1 /1;
+        }
+      }
+
+      @media (min-width: 1600px) {
+        .event-card img {
+          width: 45vh;
+          height: 45vh;
+          aspect-ratio: 1 / 1;
+        }
+        .news-card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          aspect-ratio: 1 /1;
+        }
+      }
+    </style>
+  </head>
+  <body class="home-body">
+    <header class="navbar position-fixed end-0 start-0 z-3">
+      <nav class="custom-container position-fixed end-0 start-0 top-0">
+        <div class="d-flex justify-content-between align-items-center px-3">
+          <div>
+            <a href="/" class="header-title">
+              <h2
+                class="fw-semibold w-header-title text-header-title text-white"
+              >
+                Green Economy Programme in the Philippines
+              </h2></a
+            >
+          </div>
+          <!-- MENU FOR SMALL SCREEN -->
+          <i
+            class="bi bi-list fs-2 d-xl-none"
+            id="hamburgerIcon"
+            style="cursor: pointer"
+          ></i>
+          <!-- MENU FOR LARGE SCREEN -->
+          <div
+            class="d-none d-xl-flex gap-4 fs-6 align-items-center text-white"
+          >
+            <span class="text-size-16">
+              <a
+                href="http://127.0.0.1:5500/index.html"
+                class="nav-link"
+                style="color: white; text-decoration: none"
+              >
+                <i class="bi bi-house-door-fill"></i>
+              </a>
+            </span>
+
+            <span class="text-size-16 dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                id="aboutDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="color: white; text-decoration: none"
+              >
+                About Green Economy
+                <i class="bi bi-chevron-down" id="chevronIcon"></i>
+              </a>
+              <ul
+                class="mt-2 about-green-economy-dropdown about-green-economy-dropdown-width dropdown-menu"
+                aria-labelledby="aboutDropdown"
+              >
+                <li>
+                  <a
+                    class="dropdown-item dropdown-text"
+                    href="green-economy.html"
+                    >Green Economy</a
+                  >
+                </li>
+                <li>
+                  <div class="custom-divider"></div>
+                </li>
+                <li>
+                  <a class="dropdown-item dropdown-text" href="about-gepp.html"
+                    >About GEPP</a
+                  >
+                </li>
+              </ul>
+            </span>
+
+            <span class="text-size-16 dropdown">
+              <a
+                class="nav-link dropdown-toggle d-flex align-items-center"
+                id="learningDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="color: white; text-decoration: none"
+              >
+                Learning Center
+                <i class="bi bi-chevron-down chevron-icon ms-2"></i>
+              </a>
+              <ul
+                class="mt-2 dropdown-menu learning-center-dropdown learning-center-dropdown-width"
+                aria-labelledby="learningDropdown"
+              >
+                <li>
+                  <a
+                    class="dropdown-item dropdown-text"
+                    href="knowledge-hub.html"
+                    >Asean Hub</a
+                  >
+                </li>
+                <li><div class="custom-divider"></div></li>
+                <li>
+                  <a class="dropdown-item dropdown-text">EU Hub</a>
+                </li>
+                <li><div class="custom-divider"></div></li>
+                <li>
+                  <a class="dropdown-item dropdown-text">EU Hub</a>
+                </li>
+              </ul>
+            </span>
+
+            <span class="text-size-16 dropdown">
+              <a
+                class="nav-link dropdown-toggle d-flex align-items-center"
+                id="collaborationsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="color: white; text-decoration: none"
+              >
+                Collaborations
+                <i class="bi bi-chevron-down chevron-icon ms-2"></i>
+              </a>
+              <ul
+                class="mt-2 dropdown-menu collaborations-dropdown-width collaborations-dropdown"
+                aria-labelledby="collaborationsDropDown"
+              >
+                <li>
+                  <a
+                    class="dropdown-item dropdown-text"
+                    href="collaborations.html"
+                    >Innovative Hub</a
+                  >
+                </li>
+                <li><div class="custom-divider"></div></li>
+                <li>
+                  <a class="dropdown-item dropdown-text"
+                    >Sustainability Solutions Hub</a
+                  >
+                </li>
+              </ul>
+            </span>
+
+            <span class="text-size-16 dropdown">
+              <a
+                class="nav-link dropdown-toggle d-flex align-items-center"
+                id="whatsNewsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="color: white; text-decoration: none"
+              >
+                What's News?
+                <i class="bi bi-chevron-down chevron-icon ms-2"></i>
+              </a>
+              <ul
+                class="mt-2 dropdown-menu whats-news-dropdown whats-new-dropdown-width"
+                aria-labelledby="whats-news-dropdown"
+              >
+                <li>
+                  <a class="dropdown-item dropdown-text">News</a>
+                </li>
+                <li><div class="custom-divider"></div></li>
+                <li>
+                  <a class="dropdown-item dropdown-text">Events</a>
+                </li>
+              </ul>
+            </span>
+
+            <span class="text-size-16 dropdown">
+              <a
+                class="nav-link dropdown-toggle d-flex align-items-center"
+                id="communityDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="color: white; text-decoration: none"
+              >
+                Community
+                <i class="bi bi-chevron-down chevron-icon ms-2"></i>
+              </a>
+              <ul
+                class="mt-2 dropdown-menu community-dropdown community-dropdown-width"
+                aria-labelledby="community-dropdown"
+              >
+                <li>
+                  <a class="dropdown-item dropdown-text">Discussion Space</a>
+                </li>
+                <li><div class="custom-divider"></div></li>
+                <li>
+                  <a class="dropdown-item dropdown-text">Comming soon</a>
+                </li>
+              </ul>
+            </span>
+            <span class="text-size-16">Connect with Us</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="custom-container">
+        <div
+          class="d-flex flex-column pt-pb-hero text-center justify-content-center align-items-center text-white flex-wrap ps-3 pe-3"
+        >
+          <h1 class="hero-heading-1 hero-heading-1-text">
+            Accelerating the Philippines’ Green Transition
+          </h1>
+          <h2 class="hero-heading-2 hero-heading-2-text">
+            Empowering the Philippines for a Sustainable Future
+          </h2>
+          <p class="hero-heading-3 hero-heading-3-padding">
+            A platform designed to accelerate the country’s transition to a
+            climate-smart, circular economy through collaboration, innovation,
+            and actionable solutions.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="section-1 border bg-light">
+      <div class="py-5 text-center">
+        <div class="custom-container section-1-px row align-items-center">
+          <div class="col-lg-6 text-lg-end">
+            <img
+              class="img-fluid section1-rounded"
+              src="https://picsum.photos/seed/picsum/812/512
+              "
+              alt="Placeholder Image"
+            />
+          </div>
+          <div class="col-lg-6 text-start">
+            <p class="section1-text-size mt-3 lh-mono">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo
+              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+              sanctus est.
+            </p>
+            <p class="section1-text-size">
+              Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+            </p>
+
+            <button
+              class="section1-button text-uppercase fw-semibold section1-button-padding section1-button-text-size mt-3"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+        <div class="custom-container row justify-content-center g-4">
+          <!-- Card 1 -->
+          <div class="col-12 col-sm-6 col-lg-6 col-xl-3">
+            <div
+              class="card section1-rounded-card h-100 px-3 py-5 text-center text-lg-center"
+            >
+              <img
+                src="/assets/img/icons/Image 10.png"
+                alt=""
+                class="mb-3 mx-auto ge-section1-icon"
+              />
+              <h2 class="section1-card-title section1-card-title-text-size">
+                About Green Economy
+              </h2>
+              <p class="section1-card-info-text section1-card-info-text-size">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et.
+              </p>
+              <div class="mt-auto">
+                <button
+                  class="section1-card-button section1-card-btn-padding section1-card-btn-text-size"
+                >
+                  LEARN MORE
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-12 col-sm-6 col-lg-6 col-xl-3">
+            <div
+              class="card section1-rounded-card h-100 px-3 py-5 text-center text-lg-center"
+            >
+              <img
+                src="/assets/img/icons/Image 11.png"
+                alt=""
+                class="mb-3 mx-auto ge-section1-icon"
+              />
+              <h2 class="section1-card-title section1-card-title-text-size">
+                Learn About Green Solutions
+              </h2>
+              <p class="section1-card-info-text section1-card-info-text-size">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et.
+              </p>
+              <div class="mt-auto">
+                <button
+                  class="section1-card-button section1-card-btn-padding section1-card-btn-text-size"
+                >
+                  EXPLORE CONTENT
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-12 col-sm-6 col-lg-6 col-xl-3">
+            <div
+              class="card section1-rounded-card h-100 px-3 py-5 text-center text-lg-center"
+            >
+              <img
+                src="/assets/img/icons/Image 12.png"
+                alt=""
+                class="mb-3 mx-auto ge-section1-icon"
+              />
+              <h2 class="section1-card-title section1-card-title-text-size">
+                Collaborate with Green Innovations
+              </h2>
+              <p class="section1-card-info-text section1-card-info-text-size">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna.
+              </p>
+              <div class="mt-auto">
+                <button
+                  class="section1-card-button section1-card-btn-padding section1-card-btn-text-size"
+                >
+                  START COLLABORATING
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="col-12 col-sm-6 col-lg-6 col-xl-3">
+            <div
+              class="card section1-rounded-card h-100 px-3 py-5 text-center text-lg-center"
+            >
+              <img
+                src="/assets/img/icons/Image 15.png"
+                alt=""
+                class="mb-3 mx-auto ge-section1-icon"
+              />
+              <h2 class="section1-card-title section1-card-title-text-size">
+                Stay Connected, Stay Informed
+              </h2>
+              <p class="section1-card-info-text section1-card-info-text-size">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et.
+              </p>
+              <div class="mt-auto">
+                <button
+                  class="section1-card-button section1-card-btn-padding section1-card-btn-text-size"
+                >
+                  CHECK OUR SOCIALS
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-2 section2-bg-color py-5 text-center">
+      <div class="custom-container">
+        <p class="section2-text-size custom-container section2-font-family">
+          Join the movement for a sustainable future. Together, we can transform
+          challenges into opportunities for a greener world.
+        </p>
+      </div>
+    </section>
+    <section class="section-3 bg-light text-center">
+      <div class="py-5 text-center">
+        <div class="mb-4">
+          <h2 class="section4-title-text-color fw-bold">UPCOMING EVENTS</h2>
+        </div>
+        <div class="custom-container upcoming-events row">
+          <!-- Events 1 -->
+          <div class="event section2-image-mb event-card">
+            <div
+              class="position-relative event-layout event-layout-sm event-layout-md event-layout-lg event-layout-l event-layout-xl align-items-start align-items-md-end gap-3"
+            >
+              <span
+                class="position-absolute top-0 start-10 bg-danger px-2 py-1 section3-image-badge section3-image-badge-text section3-image-badge-text-size"
+                >UPCOMING</span
+              >
+              <img
+                src="https://picsum.photos/id/237/600/300"
+                class="img-fluid section3-image-styles"
+                alt="Event Image"
+              />
+              <div class="text-start">
+                <h3
+                  class="section3-card-text-title section3-card-text-title-size"
+                >
+                  Ut dictum, eros vitae interdum portitor
+                </h3>
+                <div
+                  class="section3-text-dategeo-time-size section3-text-date-geo-time fw-semibold"
+                >
+                  <i class="bi bi-calendar4"></i> DD Month YYYY
+                </div>
+                <div
+                  class="section3-text-dategeo-time-size section3-text-date-geo-time fw-semibold"
+                >
+                  <i class="bi bi-clock"></i> 00:00 - 00:00
+                </div>
+                <div
+                  class="section3-text-dategeo-time-size section3-text-date-geo-time fw-semibold"
+                >
+                  <i class="bi bi-geo-alt"></i> Tellus, Alinquet Pretium
+                </div>
+                <p
+                  class="section3-text-info-padding section3-text-info-size section3-text-info"
+                >
+                  Vivamus non magna lobortis, molestie ipsum a, porttitor justo.
+                  Proin at consequat ipsum.
+                </p>
+                <div class="d-flex gap-2 align-items-center">
+                  <button
+                    class="section3-card-btn fw-bold section-card-btn-text-size section3-card-btn-padding text-uppercase"
+                  >
+                    Register
+                  </button>
+                  <a
+                    href=""
+                    class="text-decoration-underlined section3-card-text-link section3-card-text-link-size fw-bold text-uppercase"
+                    >CHECK THIS EVENT</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Events 2 -->
+          <div class="event section2-image-mb event-card">
+            <div
+              class="position-relative event-layout event-layout-sm event-layout-md event-layout-lg event-layout-l event-layout-xl align-items-start align-items-md-end gap-3"
+            >
+              <span
+                class="position-absolute top-0 start-10 bg-danger px-2 py-1 section3-image-badge section3-image-badge-text section3-image-badge-text-size"
+                >UPCOMING</span
+              >
+              <img
+                src="https://picsum.photos/id/237/600/300"
+                class="img-fluid section3-image-styles"
+                alt="Event Image"
+              />
+              <div class="text-start">
+                <h3
+                  class="section3-card-text-title section3-card-text-title-size"
+                >
+                  Ut dictum, eros vitae interdum portitor
+                </h3>
+                <div
+                  class="section3-text-dategeo-time-size section3-text-date-geo-time fw-semibold"
+                >
+                  <i class="bi bi-calendar4"></i> DD Month YYYY
+                </div>
+                <div
+                  class="section3-text-dategeo-time-size section3-text-date-geo-time fw-semibold"
+                >
+                  <i class="bi bi-clock"></i> 00:00 - 00:00
+                </div>
+                <div
+                  class="section3-text-dategeo-time-size section3-text-date-geo-time fw-semibold"
+                >
+                  <i class="bi bi-geo-alt"></i> Tellus, Alinquet Pretium
+                </div>
+                <p
+                  class="section3-text-info-padding section3-text-info-size section3-text-info"
+                >
+                  Vivamus non magna lobortis, molestie ipsum a, porttitor justo.
+                  Proin at consequat ipsum.
+                </p>
+                <div class="d-flex gap-2 align-items-center">
+                  <button
+                    class="section3-card-btn fw-bold section-card-btn-text-size section3-card-btn-padding text-uppercase"
+                  >
+                    Register
+                  </button>
+                  <a
+                    href=""
+                    class="text-decoration-underlined section3-card-text-link section3-card-text-link-size fw-bold text-uppercase"
+                    >CHECK THIS EVENT</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Events 3 -->
+          <div class="event section2-image-mb event-card">
+            <div
+              class="position-relative event-layout event-layout-sm event-layout-md event-layout-lg event-layout-l event-layout-xl align-items-start align-items-md-end gap-3"
+            >
+              <span
+                class="position-absolute top-0 start-10 bg-danger px-2 py-1 section3-image-badge section3-image-badge-text section3-image-badge-text-size"
+                >UPCOMING</span
+              >
+              <img
+                src="https://picsum.photos/id/237/600/300"
+                class="img-fluid section3-image-styles"
+                alt="Event Image"
+              />
+              <div class="text-start">
+                <h3
+                  class="section3-card-text-title section3-card-text-title-size"
+                >
+                  Ut dictum, eros vitae interdum portitor
+                </h3>
+                <div
+                  class="section3-text-dategeo-time-size section3-text-date-geo-time fw-semibold"
+                >
+                  <i class="bi bi-calendar4"></i> DD Month YYYY
+                </div>
+                <div
+                  class="section3-text-dategeo-time-size section3-text-date-geo-time fw-semibold"
+                >
+                  <i class="bi bi-clock"></i> 00:00 - 00:00
+                </div>
+                <div
+                  class="section3-text-dategeo-time-size section3-text-date-geo-time fw-semibold"
+                >
+                  <i class="bi bi-geo-alt"></i> Tellus, Alinquet Pretium
+                </div>
+                <p
+                  class="section3-text-info-padding section3-text-info-size section3-text-info"
+                >
+                  Vivamus non magna lobortis, molestie ipsum a, porttitor justo.
+                  Proin at consequat ipsum.
+                </p>
+                <div class="d-flex gap-2 align-items-center">
+                  <button
+                    class="section3-card-btn fw-bold section-card-btn-text-size section3-card-btn-padding text-uppercase"
+                  >
+                    Register
+                  </button>
+                  <a
+                    href=""
+                    class="text-decoration-underlined section3-card-text-link section3-card-text-link-size fw-bold text-uppercase"
+                    >CHECK THIS EVENT</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Events 4 -->
+          <div class="event section2-image-mb event-card">
+            <div
+              class="position-relative event-layout event-layout-sm event-layout-md event-layout-lg event-layout-l event-layout-xl align-items-start align-items-md-end gap-3"
+            >
+              <span
+                class="position-absolute top-0 start-10 bg-danger px-2 py-1 section3-image-badge section3-image-badge-text section3-image-badge-text-size"
+                >UPCOMING</span
+              >
+              <img
+                src="https://picsum.photos/id/237/600/300"
+                class="img-fluid section3-image-styles"
+                alt="Event Image"
+              />
+              <div class="text-start">
+                <h3
+                  class="section3-card-text-title section3-card-text-title-size"
+                >
+                  Ut dictum, eros vitae interdum portitor
+                </h3>
+                <div
+                  class="section3-text-dategeo-time-size section3-text-date-geo-time fw-semibold"
+                >
+                  <i class="bi bi-calendar4"></i> DD Month YYYY
+                </div>
+                <div
+                  class="section3-text-dategeo-time-size section3-text-date-geo-time fw-semibold"
+                >
+                  <i class="bi bi-clock"></i> 00:00 - 00:00
+                </div>
+                <div
+                  class="section3-text-dategeo-time-size section3-text-date-geo-time fw-semibold"
+                >
+                  <i class="bi bi-geo-alt"></i> Tellus, Alinquet Pretium
+                </div>
+                <p
+                  class="section3-text-info-padding section3-text-info-size section3-text-info"
+                >
+                  Vivamus non magna lobortis, molestie ipsum a, porttitor justo.
+                  Proin at consequat ipsum.
+                </p>
+                <div class="d-flex gap-2 align-items-center">
+                  <button
+                    class="section3-card-btn fw-bold section-card-btn-text-size section3-card-btn-padding text-uppercase"
+                  >
+                    Register
+                  </button>
+                  <a
+                    href=""
+                    class="text-decoration-underlined section3-card-text-link section3-card-text-link-size fw-bold text-uppercase"
+                    >CHECK THIS EVENT</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="mt-4 fw-semibold section3-button-color section3-button-padding section3-button-padding section3-button-text-size"
+        >
+          EXPLORE UPCOMING EVENTS
+        </button>
+      </div>
+    </section>
+    <section class="section4-bg-color text-center py-5">
+      <div class="">
+        <h2 class="section4-title-text-color fw-bold text-uppercase">
+          Latest news
+        </h2>
+      </div>
+
+      <div class="custom-container row g-4">
+        <!-- News 1 -->
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="row align-items-center news-card">
+            <div class="col-12 col-sm-4 col-md-12 col-lg-4">
+              <img
+                src="https://picsum.photos/id/33/1000/400"
+                class="img-fluid w-100 w-md-auto object-fit-cover rounded-4"
+                alt="Event Image"
+              />
+            </div>
+            <div class="col-12 col-sm-8 col-md-12 col-lg-8 text-start">
+              <span
+                class="text-uppercase section4-tag-text section-text-tag-text-size fst-italic"
+              >
+                Article Tag
+              </span>
+              <h3
+                class="section3-card-text-title section3-card-text-title-size"
+              >
+                Ut dictum eros vitae venenatis interdum
+              </h3>
+              <p class="section-overview-text mb-2">
+                Vivamus non magna lobortis, molestie ipsum a, porttitor justo.
+                Proin at consequat ipsum.
+              </p>
+              <a class="fw-bold section4-link-text-size section4-link-text">
+                Read more <i class="bi bi-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- News 2 -->
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="row align-items-center news-card">
+            <div class="col-12 col-sm-4 col-md-12 col-lg-4">
+              <img
+                src="https://picsum.photos/id/33/1000/400"
+                class="img-fluid w-100 w-md-auto object-fit-cover rounded-4"
+                alt="Event Image"
+              />
+            </div>
+            <div class="col-12 col-sm-8 col-md-12 col-lg-8 text-start">
+              <span
+                class="text-uppercase section4-tag-text section-text-tag-text-size fst-italic"
+              >
+                Article Tag
+              </span>
+              <h3
+                class="section3-card-text-title section3-card-text-title-size"
+              >
+                Ut dictum eros vitae venenatis interdum
+              </h3>
+              <p class="section-overview-text mb-2">
+                Vivamus non magna lobortis, molestie ipsum a, porttitor justo.
+                Proin at consequat ipsum.
+              </p>
+              <a class="fw-bold section4-link-text-size section4-link-text">
+                Read more <i class="bi bi-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--News 3-->
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="row align-items-center news-card">
+            <div class="col-12 col-sm-4 col-md-12 col-lg-4">
+              <img
+                src="https://picsum.photos/id/33/1000/400"
+                class="img-fluid w-100 w-md-auto object-fit-cover rounded-4"
+                alt="Event Image"
+              />
+            </div>
+            <div class="col-12 col-sm-8 col-md-12 col-lg-8 text-start">
+              <span
+                class="text-uppercase section4-tag-text section-text-tag-text-size fst-italic"
+              >
+                Article Tag
+              </span>
+              <h3
+                class="section3-card-text-title section3-card-text-title-size"
+              >
+                Ut dictum eros vitae venenatis interdum
+              </h3>
+              <p class="section-overview-text mb-2">
+                Vivamus non magna lobortis, molestie ipsum a, porttitor justo.
+                Proin at consequat ipsum.
+              </p>
+              <a class="fw-bold section4-link-text-size section4-link-text">
+                Read more <i class="bi bi-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- News 4-->
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="row align-items-center news-card">
+            <div class="col-12 col-sm-4 col-md-12 col-lg-4">
+              <img
+                src="https://picsum.photos/id/33/1000/400"
+                class="img-fluid w-100 w-md-auto object-fit-cover rounded-4"
+                alt="Event Image"
+              />
+            </div>
+            <div class="col-12 col-sm-8 col-md-12 col-lg-8 text-start">
+              <span
+                class="text-uppercase section4-tag-text section-text-tag-text-size fst-italic"
+              >
+                Article Tag
+              </span>
+              <h3
+                class="section3-card-text-title section3-card-text-title-size"
+              >
+                Ut dictum eros vitae venenatis interdum
+              </h3>
+              <p class="section-overview-text mb-2">
+                Vivamus non magna lobortis, molestie ipsum a, porttitor justo.
+                Proin at consequat ipsum.
+              </p>
+              <a class="fw-bold section4-link-text-size section4-link-text">
+                Read more <i class="bi bi-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="mt-5 fw-semibold section4-button-text-size section4-button-text section4-button-color section4-button-padding"
+      >
+        SEE MORE NEWS
+      </button>
+    </section>
+    <footer class="footer bg-light py-4">
+      <div class="custom-container">
+        <div class="border-top border-3 border-success"></div>
+        <div
+          class="d-flex flex-column flex-md-row align-items-center justify-content-between footer-mt-top text-center text-md-start"
+        >
+          <!-- First Column: Long EU text -->
+          <a class="fw-bold footer-text-size footer-text-color m-0" href="/">
+            EU-PH Green Economy Programme in the Philippines (GEPP)
+          </a>
+
+          <!-- Spacer Column to push icons to the right -->
+          <div>
+            <a class="fw-bold footer-text-size footer-text-color mt-3">
+              Privacy Policy
+            </a>
+            |
+            <a class="fw-bold footer-text-size footer-text-color mt-3">
+              Cookie Policy
+            </a>
+          </div>
+
+          <!-- Last Column: Social Icons -->
+          <div class="d-flex gap-3 align-items-center footer-text-color">
+            <div class="footer-text-size"><i class="bi bi-facebook"></i></div>
+            <div class="footer-text-size"><i class="bi bi-reddit"></i></div>
+            <div class="footer-text-size"><i class="bi bi-instagram"></i></div>
+            <div class="footer-text-size"><i class="bi bi-twitter-x"></i></div>
+            <div class="footer-text-size"><i class="bi bi-youtube"></i></div>
+            <div class="footer-text-size"><i class="bi bi-linkedin"></i></div>
+          </div>
+        </div>
+
+        <!-- First Row of Images -->
+        <div
+          class="d-flex flex-wrap justify-content-center align-items-center my-5 gap-4"
+        >
+          <div class="d-flex align-items-center text-start me-3 gap-2">
+            <a href="https://european-union.europa.eu/" target="_blank">
+              <img
+                src="/images/european-union.png"
+                class="european-union"
+                alt="European Union Logo"
+                style="height: auto; max-height: 50px"
+              />
+            </a>
+            <div
+              class="footer-european-union-text-size footer-eu-text-color fw-bold m-0"
+            >
+              Funded by <br />
+              the European Union
+            </div>
+          </div>
+
+          <div class="text-center">
+            <a href="https://denr.gov.ph/" target="_blank">
+              <img
+                src="/images/denr-1987.png"
+                class="denr-1987"
+                alt="DENR Logo"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Second Row of Images -->
+        <div
+          class="mt-5 d-flex flex-wrap footer-justify align-items-center footer-icons-gap"
+        >
+          <a href="https://denr.gov.ph/" target="_blank">
+            <img src="/images/denr.png" class="denr" alt="Logo 3"
+          /></a>
+          <a href="https://www.giz.de/en/html/index.html" target="_blank">
+            <img src="/images/giz.png" class="giz" alt="Logo 4"
+          /></a>
+          <a href="https://dilg.gov.ph/" target="_blank"
+            ><img src="/images/dilg.png" class="dilg" alt="Logo 5" />
+          </a>
+          <a href="https://www.undp.org/" target="_blank">
+            <img src="/images/undp.png" class="undp" alt="Logo 6"
+          /></a>
+          <a href="https://www.dti.gov.ph/" target="_blank">
+            <img src="/images/dti.png" class="dti" alt="Logo 7"
+          /></a>
+          <a href="https://www.expertisefrance.fr/" target="_blank">
+            <img
+              src="/images/expertise-france-logo.png"
+              class="expertise-france"
+              alt="Logo 8"
+          /></a>
+          <a href="https://gggi.org/" target="_blank">
+            <img src="/images/gggi.png" class="gggi" alt="Logo 10"
+          /></a>
+          <a href="https://doe.gov.ph/" target="_blank">
+            <img src="/images/doe.png" class="doe" alt="Logo 9"
+          /></a>
+          <a href="https://www.ifc.org/en/home" target="_blank">
+            <img src="/images//IFC-Logo.png" class="ifc" alt="Logo 10"
+          /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="/js/navbar.js"></script>
+</html>
