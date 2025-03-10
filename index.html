@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-    />
     <script src="/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="/styles/root.css" />
 
@@ -15,116 +11,20 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <title>Document</title>
-    <style>
-      .event-card img {
-        width: 100%;
-        height: 25vh;
-        object-fit: cover;
-      }
-
-      .news-card img {
-        width: 100%;
-        height: 25vh;
-        object-fit: cover;
-      }
-
-      @media (min-width: 576px) {
-        .event-card img {
-          width: 100%;
-          height: 36vh;
-        }
-        .news-card img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          align-self: 1 /1;
-        }
-      }
-
-      @media (min-width: 768px) {
-        .event-card img {
-          width: 40vh;
-          height: 36vh;
-          aspect-ratio: 1 / 1;
-        }
-        .news-card img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          aspect-ratio: 1/1;
-        }
-      }
-
-      @media (min-width: 992px) {
-        .event-card img {
-          width: 100%;
-          height: 27vh;
-        }
-        .news-card img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          aspect-ratio: 1 /1;
-        }
-      }
-
-      @media (min-width: 1200px) {
-        .event-card img {
-          width: 70vh;
-          height: 30vh;
-        }
-        .news-card img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          aspect-ratio: 1 /1;
-        }
-      }
-
-      @media (min-width: 1400px) {
-        .event-card img {
-          width: 45vh;
-          height: 45vh;
-          max-width: 45vh;
-          aspect-ratio: 10 / 3;
-        }
-        .news-card img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          aspect-ratio: 1 /1;
-        }
-      }
-
-      @media (min-width: 1600px) {
-        .event-card img {
-          width: 45vh;
-          height: 45vh;
-          aspect-ratio: 1 / 1;
-        }
-        .news-card img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          aspect-ratio: 1 /1;
-        }
-      }
-    </style>
   </head>
   <body class="home-body">
     <header class="navbar position-fixed end-0 start-0 z-3">
       <nav class="custom-container position-fixed end-0 start-0 top-0">
         <div class="d-flex justify-content-between align-items-center px-3">
           <div>
-            <a href="/" class="header-title">
-              <h2
-                class="fw-semibold w-header-title text-header-title text-white"
-              >
-                Green Economy Programme in the Philippines
-              </h2></a
-            >
+            <h2 class="fw-semibold w-header-title text-header-title text-white">
+              Green Economy Programme in the Philippines
+            </h2>
           </div>
           <!-- MENU FOR SMALL SCREEN -->
           <i
@@ -146,7 +46,7 @@
               </a>
             </span>
 
-            <span class="text-size-16 dropdown">
+            <span class="text-size-16 dropdown" id="about-green-economy-link">
               <a
                 class="nav-link dropdown-toggle"
                 id="aboutDropdown"
@@ -180,7 +80,7 @@
               </ul>
             </span>
 
-            <span class="text-size-16 dropdown">
+            <span class="text-size-16 dropdown" id="learning-center-link">
               <a
                 class="nav-link dropdown-toggle d-flex align-items-center"
                 id="learningDropdown"
@@ -214,7 +114,7 @@
               </ul>
             </span>
 
-            <span class="text-size-16 dropdown">
+            <span class="text-size-16 dropdown" id="collaborations-link">
               <a
                 class="nav-link dropdown-toggle d-flex align-items-center"
                 id="collaborationsDropdown"
@@ -307,13 +207,22 @@
         <div
           class="d-flex flex-column pt-pb-hero text-center justify-content-center align-items-center text-white flex-wrap ps-3 pe-3"
         >
-          <h1 class="hero-heading-1 hero-heading-1-text">
+          <h1
+            class="hero-heading-1 hero-heading-1-text wow animate__animated animate__slideInUp"
+            data-wow-delay="0.15s"
+          >
             Accelerating the Philippines’ Green Transition
           </h1>
-          <h2 class="hero-heading-2 hero-heading-2-text">
+          <h2
+            class="hero-heading-2 hero-heading-2-text wow animate__animated animate__slideInUp"
+            data-wow-delay="0.15s"
+          >
             Empowering the Philippines for a Sustainable Future
           </h2>
-          <p class="hero-heading-3 hero-heading-3-padding">
+          <p
+            class="hero-heading-3 hero-heading-3-padding wow animate__animated animate__slideInUp"
+            data-wow-delay="0.15s"
+          >
             A platform designed to accelerate the country’s transition to a
             climate-smart, circular economy through collaboration, innovation,
             and actionable solutions.
@@ -326,21 +235,28 @@
         <div class="custom-container section-1-px row align-items-center">
           <div class="col-lg-6 text-lg-end">
             <img
-              class="img-fluid section1-rounded"
+              class="img-fluid section1-rounded wow animate__animated animate__fadeIn"
+              data-wow-delay="0.15s"
               src="https://picsum.photos/seed/picsum/812/512
               "
               alt="Placeholder Image"
             />
           </div>
           <div class="col-lg-6 text-start">
-            <p class="section1-text-size mt-3 lh-mono">
+            <p
+              class="section1-text-size mt-3 lh-mono wow animate__animated animate__fadeIn"
+              data-wow-delay="0.15s"
+            >
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
               erat, sed diam voluptua. At vero eos et accusam et justo duo
               dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
               sanctus est.
             </p>
-            <p class="section1-text-size">
+            <p
+              class="section1-text-size wow animate__animated animate__fadeIn"
+              data-wow-delay="0.15s"
+            >
               Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
             </p>
 
@@ -355,16 +271,17 @@
           <!-- Card 1 -->
           <div class="col-12 col-sm-6 col-lg-6 col-xl-3">
             <div
-              class="card section1-rounded-card h-100 px-3 py-5 text-center text-lg-center"
+              class="card section1-rounded-card h-100 px-3 py-5 text-center text-lg-center wow animate__animated animate__fadeIn"
+              data-wow-delay="0.15s"
             >
               <img
                 src="/assets/img/icons/Image 10.png"
                 alt=""
                 class="mb-3 mx-auto ge-section1-icon"
               />
-              <h2 class="section1-card-title section1-card-title-text-size">
+              <h3 class="section1-card-title section1-card-title-text-size">
                 About Green Economy
-              </h2>
+              </h3>
               <p class="section1-card-info-text section1-card-info-text-size">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
@@ -382,16 +299,17 @@
           <!-- Card 2 -->
           <div class="col-12 col-sm-6 col-lg-6 col-xl-3">
             <div
-              class="card section1-rounded-card h-100 px-3 py-5 text-center text-lg-center"
+              class="card section1-rounded-card h-100 px-3 py-5 text-center text-lg-center wow animate__animated animate__fadeIn"
+              data-wow-delay="0.15s"
             >
               <img
                 src="/assets/img/icons/Image 11.png"
                 alt=""
                 class="mb-3 mx-auto ge-section1-icon"
               />
-              <h2 class="section1-card-title section1-card-title-text-size">
+              <h3 class="section1-card-title section1-card-title-text-size">
                 Learn About Green Solutions
-              </h2>
+              </h3>
               <p class="section1-card-info-text section1-card-info-text-size">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
@@ -409,16 +327,17 @@
           <!-- Card 3 -->
           <div class="col-12 col-sm-6 col-lg-6 col-xl-3">
             <div
-              class="card section1-rounded-card h-100 px-3 py-5 text-center text-lg-center"
+              class="card section1-rounded-card h-100 px-3 py-5 text-center text-lg-center wow animate__animated animate__fadeIn"
+              data-wow-delay="0.15s"
             >
               <img
                 src="/assets/img/icons/Image 12.png"
                 alt=""
                 class="mb-3 mx-auto ge-section1-icon"
               />
-              <h2 class="section1-card-title section1-card-title-text-size">
+              <h3 class="section1-card-title section1-card-title-text-size">
                 Collaborate with Green Innovations
-              </h2>
+              </h3>
               <p class="section1-card-info-text section1-card-info-text-size">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna.
@@ -435,16 +354,17 @@
           <!-- Card 4 -->
           <div class="col-12 col-sm-6 col-lg-6 col-xl-3">
             <div
-              class="card section1-rounded-card h-100 px-3 py-5 text-center text-lg-center"
+              class="card section1-rounded-card h-100 px-3 py-5 text-center text-lg-center wow animate__animated animate__fadeIn"
+              data-wow-delay="0.15s"
             >
               <img
                 src="/assets/img/icons/Image 15.png"
                 alt=""
                 class="mb-3 mx-auto ge-section1-icon"
               />
-              <h2 class="section1-card-title section1-card-title-text-size">
+              <h3 class="section1-card-title section1-card-title-text-size">
                 Stay Connected, Stay Informed
-              </h2>
+              </h3>
               <p class="section1-card-info-text section1-card-info-text-size">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
@@ -463,7 +383,10 @@
       </div>
     </section>
     <section class="section-2 section2-bg-color py-5 text-center">
-      <div class="custom-container">
+      <div
+        class="custom-container wow animate__animated animate__fadeIn"
+        data-wow-delay="0.15s"
+      >
         <p class="section2-text-size custom-container section2-font-family">
           Join the movement for a sustainable future. Together, we can transform
           challenges into opportunities for a greener world.
@@ -477,7 +400,10 @@
         </div>
         <div class="custom-container upcoming-events row">
           <!-- Events 1 -->
-          <div class="event section2-image-mb event-card">
+          <div
+            class="event section2-image-mb event-card wow animate__animated animate__fadeIn"
+            data-wow-delay="0.15s"
+          >
             <div
               class="position-relative event-layout event-layout-sm event-layout-md event-layout-lg event-layout-l event-layout-xl align-items-start align-items-md-end gap-3"
             >
@@ -486,7 +412,7 @@
                 >UPCOMING</span
               >
               <img
-                src="https://picsum.photos/id/237/600/300"
+                src="https://picsum.photos/id/237/1000/300"
                 class="img-fluid section3-image-styles"
                 alt="Event Image"
               />
@@ -533,7 +459,10 @@
             </div>
           </div>
           <!-- Events 2 -->
-          <div class="event section2-image-mb event-card">
+          <div
+            class="event section2-image-mb event-card wow animate__animated animate__fadeIn"
+            data-wow-delay="0.15s"
+          >
             <div
               class="position-relative event-layout event-layout-sm event-layout-md event-layout-lg event-layout-l event-layout-xl align-items-start align-items-md-end gap-3"
             >
@@ -589,7 +518,10 @@
             </div>
           </div>
           <!-- Events 3 -->
-          <div class="event section2-image-mb event-card">
+          <div
+            class="event section2-image-mb event-card wow animate__animated animate__fadeIn"
+            data-wow-delay="0.15s"
+          >
             <div
               class="position-relative event-layout event-layout-sm event-layout-md event-layout-lg event-layout-l event-layout-xl align-items-start align-items-md-end gap-3"
             >
@@ -645,7 +577,10 @@
             </div>
           </div>
           <!-- Events 4 -->
-          <div class="event section2-image-mb event-card">
+          <div
+            class="event section2-image-mb event-card wow animate__animated animate__fadeIn"
+            data-wow-delay="0.15s"
+          >
             <div
               class="position-relative event-layout event-layout-sm event-layout-md event-layout-lg event-layout-l event-layout-xl align-items-start align-items-md-end gap-3"
             >
@@ -718,7 +653,10 @@
 
       <div class="custom-container row g-4">
         <!-- News 1 -->
-        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+        <div
+          class="col-12 col-sm-12 col-md-6 col-lg-6 wow animate__animated animate__fadeIn"
+          data-wow-delay="0.15s"
+        >
           <div class="row align-items-center news-card">
             <div class="col-12 col-sm-4 col-md-12 col-lg-4">
               <img
@@ -749,7 +687,10 @@
           </div>
         </div>
         <!-- News 2 -->
-        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+        <div
+          class="col-12 col-sm-12 col-md-6 col-lg-6 wow animate__animated animate__fadeIn"
+          data-wow-delay="0.15s"
+        >
           <div class="row align-items-center news-card">
             <div class="col-12 col-sm-4 col-md-12 col-lg-4">
               <img
@@ -780,7 +721,10 @@
           </div>
         </div>
         <!--News 3-->
-        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+        <div
+          class="col-12 col-sm-12 col-md-6 col-lg-6 wow animate__animated animate__fadeIn"
+          data-wow-delay="0.15s"
+        >
           <div class="row align-items-center news-card">
             <div class="col-12 col-sm-4 col-md-12 col-lg-4">
               <img
@@ -811,7 +755,10 @@
           </div>
         </div>
         <!-- News 4-->
-        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+        <div
+          class="col-12 col-sm-12 col-md-6 col-lg-6 wow animate__animated animate__fadeIn"
+          data-wow-delay="0.15s"
+        >
           <div class="row align-items-center news-card">
             <div class="col-12 col-sm-4 col-md-12 col-lg-4">
               <img
@@ -952,4 +899,8 @@
     </footer>
   </body>
   <script src="/js/navbar.js"></script>
+  <script src="/js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 </html>
