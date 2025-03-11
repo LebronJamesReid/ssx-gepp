@@ -1,0 +1,158 @@
+.input-group input{
+    border: 1px solid var(--unnamed-color-005f3c);
+    border-left: none;
+}
+
+.input-group span{
+    border: 1px solid var(--unnamed-color-005f3c);
+    background-color: white;
+    color: var(--unnamed-color-005f3c);
+
+}
+
+.input-group span > i {
+ color: var(--unnamed-color-005f3c);
+ font-size: 20px;
+}
+
+ .filter-content {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-20)/var(--unnamed-line-spacing-25) var(--unnamed-font-family-helvetica-neue);
+    color: var(--unnamed-color-005f3c);
+    }
+
+.clear-filter{
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-26) var(--unnamed-font-family-helvetica-neue);
+    text-decoration: underline;
+}
+
+.checkbox-container input{
+    height: 30px;
+    width: 30px;
+ }
+
+
+ .stories {
+    width: 100%;
+  }
+  
+
+ .stories-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stories-card img {
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+  }
+
+    /* Small screens (≥576px) */
+    @media (min-width: 576px) {
+        .stories {
+            width: 100%;
+          }
+
+        .stories-card img {
+         width: 100%;
+         height: 36vh;
+        }
+        .stories-layout-sm {
+          flex-direction: column;
+        }
+    
+      }
+
+
+      @media (min-width: 768px) {
+        .stories {
+            width: 100%;
+          }
+
+        .stories-card img {
+          width: 40vh;
+          height: 36vh;
+          aspect-ratio: 1 / 1;
+        }
+
+        .stories-layout-md {
+            flex-direction: column;
+          }
+      }
+
+
+
+      
+  @media (min-width: 992px) {
+    .stories {
+        width: 50%;
+      }
+
+    .stories-card img {
+      width: 100%;
+      height: 27vh;
+    }
+    .stories-layout-lg {
+        flex-direction: column;
+      }
+  }
+
+  
+  @media (min-width: 1200px) {
+
+    .stories-layout-lg {
+        flex-direction: column;
+      }
+    .stories-card img {
+      width: 70vh;
+      height: 30vh;
+    }
+  }
+
+  @media (min-width: 1400px) {
+  
+    .stories{
+        width: 100%;
+    }
+    .stories-card img {
+      width: 45vh;
+      height: 45vh;
+      max-width: 45vh;
+      aspect-ratio: 10 / 3;
+    }
+    .stories-layout-l {
+        flex-direction: row;
+      }
+  }
+
+
+  @media (min-width: 1600px) {
+
+    .stories {
+        width: 100%;
+      }
+    .stories-card img {
+      width: 45vh;
+      height: 45vh;
+      aspect-ratio: 1 / 1;
+    }
+    .stories-layout-md {
+        flex-direction: column;
+      }
+      .stories-layout-xl {
+        flex-direction: row;
+      }
+
+  }
+
+
+  @media (min-width: 1920px) {
+   
+    .stories {
+      width: 100%;
+    }
+    .stories-layout-xxl {
+      flex-direction: row;
+    }
+   
+  }
