@@ -195,6 +195,24 @@
 
 
   /* HEADER PAGE CSS*/
+  .bg-sm-screen{
+    background-color: var(--unnamed-color-005f3c);
+  }
+  .offcanvas-end {
+    width: 100% !important; /* Set the offcanvas width to 100% */
+    max-width: 100% !important; /* Ensure the max-width is 100% */
+  }
+
+  .custom-toggler-icon .navbar-toggler-icon {
+    background-color: white !important;  /* This ensures the icon is white */
+  }
+  .btn-close {
+    color: white !important; /* Change to your desired color */
+
+  }
+  
+
+
   .header-title{
     text-decoration: none;
   }
@@ -810,7 +828,7 @@
   }
   
   .card {
-    background: var(--unnamed-color-f9f9f6) 0% 0% no-repeat padding-box;
+    background: var(--unnamed-color-f9f9f6) ;
     border: 2px solid var(--unnamed-color-005f3c);
     box-shadow: 3px 3px 0px #00000066;
   }
@@ -867,7 +885,9 @@
     padding-left: 0;
     padding-right: 0;
   }
-  
+  .card-rounded{
+    border-radius: 20px;
+  }
   @media (min-width: 576px) {
     .section1-card-info-text-size {
       font-size: 16px;
@@ -918,7 +938,8 @@
   }
   
   /*? LAPTOPS/PC */
-  @media (min-width: 992px) {
+  @media (min-width: 992px) {  
+
     .section1-card-info-text-size {
       font-size: 16px;
     }
@@ -941,6 +962,7 @@
     .section1-rounded-card {
       border-radius: 40px;
     }
+  
     .ge-section1-title-size {
       font-size: 30px;
     }
@@ -1201,7 +1223,10 @@
   .section3-image-badge {
     border-radius: 10px 10px 10px 10px;
   }
-  
+  .image-badge {
+    top: 10px;
+    right: 5px;
+  }
   .section3-image-badge-text {
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold)
       var(--unnamed-font-size-16) / 30px var(--unnamed-font-family-helvetica-neue);

@@ -27,20 +27,228 @@
       <nav class="custom-container position-fixed end-0 start-0 top-0">
         <div class="d-flex justify-content-between align-items-center px-3">
           <div>
-            <a href="/" class="header-title">
-              <h2
-                class="fw-semibold w-header-title text-header-title text-white"
-              >
-                Green Economy Programme in the Philippines
-              </h2></a
-            >
+            <h2 class="fw-semibold w-header-title text-header-title text-white">
+              Green Economy Programme in the Philippines
+            </h2>
           </div>
           <!-- MENU FOR SMALL SCREEN -->
-          <i
-            class="bi bi-list fs-2 d-xl-none"
-            id="hamburgerIcon"
-            style="cursor: pointer"
-          ></i>
+
+          <button
+            class="navbar-toggler d-xl-none text-light border-light"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="bi bi-list fs-1"></span>
+          </button>
+          <!-- Offcanvas Navbar for smaller screens -->
+          <nav class="navbar fixed-top d-xl-none">
+            <div class="container-fluid">
+              <div
+                class="offcanvas offcanvas-end bg-sm-screen"
+                tabindex="-1"
+                id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel"
+              >
+                <div class="offcanvas-header mt-2 mx-3">
+                  <h2
+                    class="fw-semibold w-header-title text-header-title text-white"
+                  >
+                    Green Economy Programme in the Philippines
+                  </h2>
+                  <button
+                    type="button"
+                    class="text-light btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body mx-3">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="text-size-16">
+                      <a
+                        href="http://127.0.0.1:5500/index.html"
+                        class="nav-link"
+                        style="color: white; text-decoration: none"
+                      >
+                        Home
+                      </a>
+                    </li>
+                    <li
+                      class="text-size-16 dropdown"
+                      id="about-green-economy-link"
+                    >
+                      <a
+                        class="nav-link dropdown-toggle"
+                        id="aboutDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        style="color: white; text-decoration: none"
+                      >
+                        About Green Economy
+                        <i class="bi bi-chevron-down" id="chevronIcon"></i>
+                      </a>
+                      <ul
+                        class="mt-2 about-green-economy-dropdown about-green-economy-dropdown-width dropdown-menu"
+                        aria-labelledby="aboutDropdown"
+                      >
+                        <li>
+                          <a
+                            class="dropdown-item dropdown-text"
+                            href="green-economy.html"
+                            >Green Economy</a
+                          >
+                        </li>
+                        <li>
+                          <div class="custom-divider"></div>
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item dropdown-text"
+                            href="about-gepp.html"
+                            >About GEPP</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="text-size-16 dropdown" id="learning-center-link">
+                      <a
+                        class="nav-link dropdown-toggle d-flex align-items-center"
+                        id="learningDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        style="color: white; text-decoration: none"
+                      >
+                        Learning Center
+                        <i class="bi bi-chevron-down chevron-icon ms-2"></i>
+                      </a>
+                      <ul
+                        class="mt-2 dropdown-menu learning-center-dropdown learning-center-dropdown-width"
+                        aria-labelledby="learningDropdown"
+                      >
+                        <li>
+                          <a
+                            class="dropdown-item dropdown-text"
+                            href="knowledge-hub.html"
+                            >Asean Hub</a
+                          >
+                        </li>
+                        <li><div class="custom-divider"></div></li>
+                        <li>
+                          <a class="dropdown-item dropdown-text">EU Hub</a>
+                        </li>
+                        <li><div class="custom-divider"></div></li>
+                        <li>
+                          <a class="dropdown-item dropdown-text">EU Hub</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="text-size-16 dropdown" id="collaborations-link">
+                      <a
+                        class="nav-link dropdown-toggle d-flex align-items-center"
+                        id="collaborationsDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        style="color: white; text-decoration: none"
+                      >
+                        Collaborations
+                        <i class="bi bi-chevron-down chevron-icon ms-2"></i>
+                      </a>
+                      <ul
+                        class="mt-2 dropdown-menu collaborations-dropdown-width collaborations-dropdown"
+                        aria-labelledby="collaborationsDropDown"
+                      >
+                        <li>
+                          <a
+                            class="dropdown-item dropdown-text"
+                            href="collaborations.html"
+                            >Innovative Hub</a
+                          >
+                        </li>
+                        <li><div class="custom-divider"></div></li>
+                        <li>
+                          <a class="dropdown-item dropdown-text"
+                            >Sustainability Solutions Hub</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="text-size-16 dropdown">
+                      <a
+                        class="nav-link dropdown-toggle d-flex align-items-center"
+                        id="whatsNewsDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        style="color: white; text-decoration: none"
+                      >
+                        What's News?
+                        <i class="bi bi-chevron-down chevron-icon ms-2"></i>
+                      </a>
+                      <ul
+                        class="mt-2 dropdown-menu whats-news-dropdown whats-new-dropdown-width"
+                        aria-labelledby="whats-news-dropdown"
+                      >
+                        <li>
+                          <a class="dropdown-item dropdown-text">News</a>
+                        </li>
+                        <li><div class="custom-divider"></div></li>
+                        <li>
+                          <a class="dropdown-item dropdown-text">Events</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="text-size-16 dropdown">
+                      <a
+                        class="nav-link dropdown-toggle d-flex align-items-center"
+                        id="communityDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        style="color: white; text-decoration: none"
+                      >
+                        Community
+                        <i class="bi bi-chevron-down chevron-icon ms-2"></i>
+                      </a>
+                      <ul
+                        class="mt-2 dropdown-menu community-dropdown community-dropdown-width"
+                        aria-labelledby="community-dropdown"
+                      >
+                        <li>
+                          <a class="dropdown-item dropdown-text"
+                            >Discussion Space</a
+                          >
+                        </li>
+                        <li><div class="custom-divider"></div></li>
+                        <li>
+                          <a class="dropdown-item dropdown-text"
+                            >Comming soon</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="text-size-16 text-light">Connect with Us</li>
+                  </ul>
+                  <form class="d-flex mt-3" role="search">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success" type="submit">
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </nav>
           <!-- MENU FOR LARGE SCREEN -->
           <div
             class="d-none d-xl-flex gap-4 fs-6 align-items-center text-white"
@@ -55,7 +263,7 @@
               </a>
             </span>
 
-            <span class="text-size-16 dropdown">
+            <span class="text-size-16 dropdown" id="about-green-economy-link">
               <a
                 class="nav-link dropdown-toggle"
                 id="aboutDropdown"

@@ -1,0 +1,151 @@
+
+ .events-main {
+    width: 100%;
+  }
+  
+  .events-main-layout div{
+    padding: 0px 30px 20px 30px;
+  }
+
+ .events-main-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .events-main-card img {
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+  }
+
+
+
+
+    /* Small screens (≥576px) */
+    @media (min-width: 576px) {
+
+        .events-main {
+            width: 100%;
+          }
+
+        .events-main-card img {
+            width: 95vh;
+            height: 35vh;
+            max-width: 95vh;
+            aspect-ratio: 10 / 3; 
+        }
+        .events-main-layout-sm {
+          flex-direction: column;
+        }
+    
+      }
+
+
+      @media (min-width: 768px) {
+        .events-main {
+            width: 100%;
+          }
+
+        .events-main-card img {
+            width: 100vh;
+            height: 40vh;
+            max-width: 100vh;
+            aspect-ratio: 10 / 3;
+        }
+
+        .events-main-layout-md {
+            flex-direction: column;
+          }  
+       
+      }
+
+
+
+      
+  @media (min-width: 992px) {
+    .events-main {
+        width: 100%;
+      }
+
+    .events-main-card img {
+        width: 110vh;
+        height: 40vh;
+        max-width: 110vh;
+        aspect-ratio: 10 / 3;
+    }
+    .events-main-layout-lg {
+        flex-direction: column;
+      }
+   
+  }
+
+  
+  @media (min-width: 1200px) {
+    .events-main {
+        width: 48%;
+      }
+    .events-main-layout-lg {
+        flex-direction: column;
+      }
+    .events-main-card img {
+      width: 70vh;
+      height: 30vh;
+    }
+   
+  }
+
+  @media (min-width: 1400px) {
+  
+    .events-main{
+        width: 48%;
+    }
+    .events-main-card img {
+      width: 70vh;
+      height: 35vh;
+      max-width: 70vh;
+      aspect-ratio: 10 / 3;
+    }
+    .events-main-layout-l {
+        flex-direction: column;
+      }
+   
+  }
+
+
+  @media (min-width: 1600px) {
+
+    .events-main {
+        width: 100%;
+      }
+    .events-main-card img {
+      width: 45vh;
+      height: 45vh;
+      aspect-ratio: 1 / 1;
+    }
+    .events-main-layout-md {
+        flex-direction: column;
+      }
+      .events-main-layout-xl {
+        flex-direction: row;
+      }
+
+  }
+
+  @media (min-width: 1920px) {
+    .events-main {
+        width:48%; /* Adjust the container width if needed */
+
+    }
+    
+      .events-main-card img {
+        width: 100%; /* Ensures it fills the container */
+        max-width: 100%;
+        height: 25vh; 
+        min-height: 25vh;
+        aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio, adjust as needed */
+      }
+    
+      .events-main-layout-xxl {
+        flex-direction: column; /* Adjust layout to column at 1920px */
+      }
+  }
