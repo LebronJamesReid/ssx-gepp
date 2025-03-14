@@ -100,7 +100,8 @@
 
   .event-card img {
     width: 100%;
-    height: 25vh;
+    height: 100%;
+    aspect-ratio: 16/9;
     object-fit: cover;
   }
 
@@ -113,7 +114,8 @@
   @media (min-width: 576px) {
     .event-card img {
       width: 100%;
-      height: 36vh;
+    height: 100%;
+    aspect-ratio: 10/4;
     }
     .news-card img {
       width: 100%;
@@ -123,10 +125,67 @@
     }
   }
 
+  .image-info{
+    font: italic normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-20)/50px Times New Roman;
+  }
+
+  .news-title{
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) 50px/var(--unnamed-line-spacing-55) Abhaya Libre;
+    color: var(--unnamed-color-005f3c);
+    }
+
+    .news-info{
+      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-30)/30px Abhaya Libre ;
+      color: var(--unnamed-color-1e1e1b);
+    }
+  .author{
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-20)/50px Abhaya Libre; 
+  color: var(--unnamed-color-1e1e1b);
+  }
+  .publish-date{
+    font: italic normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-20)/50px Times New Roman;
+    color: var(--unnamed-color-1e1e1b);
+  }
+
+  .news-section-title{
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-40)/var(--unnamed-line-spacing-55) Abhaya Libre;
+    color: var(--unnamed-color-005f3c);
+  }
+
+  .news-paragraph{
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-20)/30px Abhaya Libre;
+letter-spacing: var(--unnamed-character-spacing-0);
+  }
+
+  .pt-pb-news {
+    padding-top: 170px;
+    padding-bottom: 50px;
+  }
+
+  .custom-mt{
+  margin-top: 50px; 
+  }
+  
+  .news-card-title{
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-30)/40px Abhaya Libre;
+    color: var(--unnamed-color-005f3c);
+  }
+
+  .news-card-info{
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-20)/30px Abhaya Libre;
+  }
+
+  .news-card-link{
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-20)/30px Abhaya Libre;
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-005f3c); 
+}
+
+
   @media (min-width: 768px) {
     .event-card img {
-      width: 40vh;
-      height: 36vh;
+      width: 40%;
+      height: 40%;
       aspect-ratio: 1 / 1;
     }
     .news-card img {
@@ -140,7 +199,8 @@
   @media (min-width: 992px) {
     .event-card img {
       width: 100%;
-      height: 27vh;
+      height: 100%;
+      aspect-ratio: 16/9;
     }
     .news-card img {
       width: 100%;
@@ -206,9 +266,9 @@
   .custom-toggler-icon .navbar-toggler-icon {
     background-color: white !important;  /* This ensures the icon is white */
   }
-  .btn-close {
+  .btn-x {
     color: white !important; /* Change to your desired color */
-
+    background-color: #e81515;
   }
   
 
@@ -239,10 +299,18 @@
   
   .custom-divider {
     width: 80%; /* Controls the length of the divider */
-    height: 1px;
+    height: 1px !important;
     background-color: #4c7756;
     margin: 4px auto; /* Centers the divider */
   }
+
+  .custom-divider-sm-screen {
+    width: 90%; /* Controls the length of the divider */
+    height: 1px !important;
+    background-color: #4c7756;
+    margin: 4px auto; /* Centers the divider */
+  }
+  
   
   .about-green-economy-dropdown {
     border: 1px solid var(--unnamed-color-005f3c);
@@ -253,9 +321,9 @@
   #aboutDropdown {
     transition: color 0.3s ease-in-out;
   }
-  .about-green-economy-dropdown-width {
+  /* .about-green-economy-dropdown-width {
     width: 190px;
-  }
+  } */
   .dropdown-text {
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold)
       var(--unnamed-font-size-16) / 19px var(--unnamed-font-family-helvetica-neue);
@@ -269,9 +337,9 @@
   /*? END ABOUT GREEN ECONOMY*/
   
   /*? LEARNING CENTER*/
-  .learning-center-dropdown-width {
+  /* .learning-center-dropdown-width {
     width: 70px;
-  }
+  } */
   
   .learning-center-dropdown {
     border: 1px solid var(--unnamed-color-005f3c);
@@ -290,10 +358,10 @@
   /*? END LEARNING CENTER*/
   
   /*? COLLABORATIONS*/
-  .collaborations-dropdown-width {
+  /* .collaborations-dropdown-width {
     width: 250px;
   }
-  
+   */
   .collaborations-dropdown {
     border: 1px solid var(--unnamed-color-005f3c);
     border-radius: 10px;
@@ -326,11 +394,13 @@
     background: var(--unnamed-color-e6f2e6) 0% 0% no-repeat padding-box;
     color: var(--unnamed-color-005f3c) !important;
   }
+
+
   /*? END WHATS NEWS*/
   /*? COMMUNITY*/
-  .community-dropdown-width {
+  /* .community-dropdown-width {
     width: 180px;
-  }
+  } */
   
   .community-dropdown {
     border: 1px solid var(--unnamed-color-005f3c);
@@ -462,6 +532,10 @@
   }
   
   @media (min-width: 768px) {
+    .custom-divider-sm-screen {
+      width:95%;
+     
+    }
     .custom-text {
       font-size: 24px;
     }

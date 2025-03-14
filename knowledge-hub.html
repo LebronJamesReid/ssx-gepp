@@ -52,7 +52,9 @@
                 id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel"
               >
-                <div class="offcanvas-header mt-2 mx-3">
+                <div
+                  class="offcanvas-header mt-2 mx-3 d-flex justify-content-between"
+                >
                   <h2
                     class="fw-semibold w-header-title text-header-title text-white"
                   >
@@ -60,14 +62,16 @@
                   </h2>
                   <button
                     type="button"
-                    class="text-light btn-close"
+                    class="navbar-toggler d-xl-none text-light border-light py-2"
                     data-bs-dismiss="offcanvas"
                     aria-label="Close"
-                  ></button>
+                  >
+                    <i class="bi bi-x-lg"></i>
+                  </button>
                 </div>
                 <div class="offcanvas-body mx-3">
                   <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="text-size-16">
+                    <li class="dropdown-text">
                       <a
                         href="http://127.0.0.1:5500/index.html"
                         class="nav-link"
@@ -76,10 +80,7 @@
                         Home
                       </a>
                     </li>
-                    <li
-                      class="text-size-16 dropdown"
-                      id="about-green-economy-link"
-                    >
+                    <li class="about-green-economy-link dropdown-text dropdown">
                       <a
                         class="nav-link dropdown-toggle"
                         id="aboutDropdown"
@@ -103,7 +104,7 @@
                           >
                         </li>
                         <li>
-                          <div class="custom-divider"></div>
+                          <div class="custom-divider-sm-screen"></div>
                         </li>
                         <li>
                           <a
@@ -114,7 +115,7 @@
                         </li>
                       </ul>
                     </li>
-                    <li class="text-size-16 dropdown" id="learning-center-link">
+                    <li class="learning-center-link dropdown-text dropdown">
                       <a
                         class="nav-link dropdown-toggle d-flex align-items-center"
                         id="learningDropdown"
@@ -137,17 +138,17 @@
                             >Asean Hub</a
                           >
                         </li>
-                        <li><div class="custom-divider"></div></li>
+                        <li><div class="custom-divider-sm-screen"></div></li>
                         <li>
                           <a class="dropdown-item dropdown-text">EU Hub</a>
                         </li>
-                        <li><div class="custom-divider"></div></li>
+                        <li><div class="custom-divider-sm-screen"></div></li>
                         <li>
                           <a class="dropdown-item dropdown-text">EU Hub</a>
                         </li>
                       </ul>
                     </li>
-                    <li class="text-size-16 dropdown" id="collaborations-link">
+                    <li class="collaborations-link dropdown-text dropdown">
                       <a
                         class="nav-link dropdown-toggle d-flex align-items-center"
                         id="collaborationsDropdown"
@@ -170,7 +171,7 @@
                             >Innovative Hub</a
                           >
                         </li>
-                        <li><div class="custom-divider"></div></li>
+                        <li><div class="custom-divider-sm-screen"></div></li>
                         <li>
                           <a class="dropdown-item dropdown-text"
                             >Sustainability Solutions Hub</a
@@ -178,7 +179,7 @@
                         </li>
                       </ul>
                     </li>
-                    <li class="text-size-16 dropdown">
+                    <li class="dropdown-text dropdown">
                       <a
                         class="nav-link dropdown-toggle d-flex align-items-center"
                         id="whatsNewsDropdown"
@@ -197,13 +198,13 @@
                         <li>
                           <a class="dropdown-item dropdown-text">News</a>
                         </li>
-                        <li><div class="custom-divider"></div></li>
+                        <li><div class="custom-divider-sm-screen"></div></li>
                         <li>
                           <a class="dropdown-item dropdown-text">Events</a>
                         </li>
                       </ul>
                     </li>
-                    <li class="text-size-16 dropdown">
+                    <li class="dropdown-text dropdown">
                       <a
                         class="nav-link dropdown-toggle d-flex align-items-center"
                         id="communityDropdown"
@@ -224,7 +225,7 @@
                             >Discussion Space</a
                           >
                         </li>
-                        <li><div class="custom-divider"></div></li>
+                        <li><div class="custom-divider-sm-screen"></div></li>
                         <li>
                           <a class="dropdown-item dropdown-text"
                             >Comming soon</a
@@ -232,9 +233,11 @@
                         </li>
                       </ul>
                     </li>
-                    <li class="text-size-16 text-light">Connect with Us</li>
+                    <li class="dropdown-text dropdown text-light my-1">
+                      Connect with Us
+                    </li>
                   </ul>
-                  <form class="d-flex mt-3" role="search">
+                  <!-- <form class="d-flex mt-3" role="search">
                     <input
                       class="form-control me-2"
                       type="search"
@@ -244,7 +247,7 @@
                     <button class="btn btn-outline-success" type="submit">
                       Search
                     </button>
-                  </form>
+                  </form> -->
                 </div>
               </div>
             </div>
@@ -263,7 +266,7 @@
               </a>
             </span>
 
-            <span class="text-size-16 dropdown" id="about-green-economy-link">
+            <span class="about-green-economy-link text-size-16 dropdown">
               <a
                 class="nav-link dropdown-toggle"
                 id="aboutDropdown"
@@ -297,7 +300,7 @@
               </ul>
             </span>
 
-            <span class="text-size-16 dropdown" id="learning-center-link">
+            <span class="learning-center-link text-size-16 dropdown">
               <a
                 class="nav-link dropdown-toggle d-flex align-items-center"
                 id="learningDropdown"
@@ -331,7 +334,7 @@
               </ul>
             </span>
 
-            <span class="text-size-16 dropdown" id="collaborations-link">
+            <span class="collaborations-link text-size-16 dropdown">
               <a
                 class="nav-link dropdown-toggle d-flex align-items-center"
                 id="collaborationsDropdown"

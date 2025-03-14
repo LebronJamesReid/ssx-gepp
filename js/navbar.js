@@ -8,23 +8,33 @@ function setupNavbarScroll() {
   const header = document.querySelector(".navbar");
   if (!header) return;
 
+  // Check if the current page is 'news-internal.html'
+  const currentPath = window.location.pathname;
+  if (currentPath === "/news-internal.html") {
+    // Ensure the scrolled class is never added on this page
+    header.classList.add("scrolled");
+    return; // Disable scroll effect on this page
+  }
+
   window.addEventListener("scroll", function () {
     header.classList.toggle("scrolled", window.scrollY > 20);
   });
 }
 
+
+
 function setupActiveNavLinks() {
   const navLinks = document.querySelectorAll(".nav-link");
-  const aboutGreenEconomyLink = document.querySelector("#about-green-economy-link");
-  const learningCenterLink = document.querySelector("#learning-center-link");
-  const collaborationsLink = document.querySelector("#collaborations-link")
+  const aboutGreenEconomyLinks = document.querySelectorAll(".about-green-economy-link");
+  const learningCenterLinks = document.querySelectorAll(".learning-center-link");
+  const collaborationsLinks = document.querySelectorAll(".collaborations-link")
   if (!navLinks.length) return;
 
   const currentPath = window.location.pathname; // Get only the path (without domain)
 
   navLinks.forEach((link) => {
-    const linkHref = link.getAttribute('href'); // Get the href attribute of the link
-    const linkPath = new URL(linkHref, window.location.origin).pathname; // Resolve the relative URL
+    const linkHref = link.getAttribute('href'); // ? href attribute of the link
+    const linkPath = new URL(linkHref, window.location.origin).pathname; // ? relative URL
 
     // Check if link matches the current path
     if (
@@ -40,31 +50,30 @@ function setupActiveNavLinks() {
     // });
   });
 
-  // Check if the current page  green-economy.html or about-gepp.html
+  // ?   green-economy.html or about-gepp.html
   if (currentPath === "/green-economy.html" || currentPath === "/about-gepp.html") {
-    // Add active class to the "About Green Economy" link
-    if (aboutGreenEconomyLink) {
-      const dropdownToggle = aboutGreenEconomyLink.querySelector('.nav-link');
-      dropdownToggle.classList.add("active");
-    }
+    aboutGreenEconomyLinks.forEach((link) => {
+      const dropdownToggle = link.querySelector('.nav-link');
+      if (dropdownToggle) dropdownToggle.classList.add("active");
+    });
   }
+    // ? knowledege hub
 
-    // Check if the current page  knowledege hub
     if (currentPath === "/knowledge-hub.html") {
-      // Add active class to the "About Green Economy" link
-      if (learningCenterLink) {
-        const dropdownToggle = learningCenterLink.querySelector('.nav-link');
-        dropdownToggle.classList.add("active");
-      }
+      learningCenterLinks.forEach((link) => {
+        const dropdownToggle = link.querySelector(".nav-link");
+        if (dropdownToggle) dropdownToggle.classList.add("active");
+      })
+  
     }
 
-            // Check if the current page  knowledege hub
+            // ? collaborations
             if (currentPath === "/collaborations.html") {
-              // Add active class to the "About Green Economy" link
-              if (collaborationsLink) {
-                const dropdownToggle = collaborationsLink.querySelector('.nav-link');
-                dropdownToggle.classList.add("active");
-              }
+              collaborationsLinks.forEach((link) => {
+                const dropdownToggle = link.querySelector(".nav-link");
+                if (dropdownToggle) dropdownToggle.classList.add("active");
+              })
+             
             }
 }
 
